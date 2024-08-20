@@ -1,0 +1,407 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* VARIABLES */
+:root {
+    --color-primary: #ff5e00;
+}
+:root {
+  --icon-color: #000; /* default icon color */
+}
+
+body.dark-mode {
+  --icon-color: #fff; /* icon color in dark mode */
+}
+
+.icon {
+  color: var(--icon-color); /* use the CSS variable for icon color */
+}
+
+/* Body */
+
+* {
+    margin: 0;
+    padding-top: 50px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s;
+}
+
+#text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.home {
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* CONTENT */
+.home-container .info {
+    width: 50%;
+}
+
+.home-container .info h4 {
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.whats-app {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.icon {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.icon.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer {
+    position: absolute; /* add this to center the footer horizontally */
+    left: 50%;
+    transform: translateX(-50%); /* add this to center the footer horizontally */
+    padding: 10px;
+    text-align: center;
+    font-size: 10px; /* reduce font size to 10px */
+    color: #666;
+    transition: background-color 0.2s ease; /* add transition for smooth change */
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ff0101;
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: #0066ff;
+}
+
+/* Add a class for dark theme */
+.dark-theme .footer {
+  background-color: #333; /* change to a dark background color */
+  color: #fff; /* change text color to white */
+}
+
+.dark-theme .footer a {
+  color: #66ccff; /* change link color to a bright blue */
+}
+
+.dark-theme .footer a:hover {
+  color: #fff; /* change hover color to white */
+}  
+
+/* General Styling */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s;
+}
+
+#text {
+    font-size: 24px;
+    font-weight: bold;
+}
+.home{
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin: 0 auto 0 auto;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* CONTENT */
+.home-container .info{
+    width: 50%;
+}
+
+.home-container .info h4{
+    font-size: 2em;
+    font-weight: 200;
+}
+
+.home-container .info h2{
+    font-size: 5.5em;
+    font-weight: 600;
+    line-height: 100px;
+}
+
+.home-container .info h2 span{
+    color: var(--color-primary);
+}
+
+.home-container .info h3 span{
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--color-primary)
+}
+
+.home-container .info p{
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.home-container .info button{
+    background: var(--color-primary);
+    color: #000;
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    margin: 20px 20px 0 0;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.home-container .info button.contact{
+    background: #ececec;
+    color: #000;
+}
+
+.home-container .info button i{
+    position: relative;
+    top: 5px;
+    font-size: 1.2em;
+    color: var(--color-primary);
+}
+
+
+
+/* IMAGE */
+.home-container .home-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.home-container .home-img img{
+    width: 50%;
+    filter: drop-shadow(rgba(0,0,0,0.5) 1rem 0 10px);
+    animation: animateImg 10s ease-in-out infinite;
+}
+
+.home-container .home-img::before{
+    content: '';
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(70deg, transparent 0%, var(--color-primary) 60%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    animation: animateBg 10s ease-in-out infinite;
+}
+
+
+/* Animation of Movement*/
+
+@keyframes animateImg {
+    0%, 100%{
+        transform: translateX(0px);
+    }
+    
+    50%{
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes animateBg {
+    0%, 100%{
+        transform: translateX(0px);
+    }
+    
+    50%{
+        transform: translateX(30px);
+    }
+}
+
+
+/* DARKMODE */
+
+.darkmode{
+    right: 0;
+    width: 80px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all .5s;
+    position: fixed;
+    top: 10px; /* adjust the value to your liking */
+    left: 10px; /* adjust the value to your liking */
+     z-index: 1; /* make sure it's on top of other elements */
+    display: flex;
+    margin-right: 10px; /* add some space between the icons */
+    cursor: pointer; /* make the icons clickable */
+}
+
+.darkmode i {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.darkmode i:hover {
+    background-color: #f0f0f0;
+}
+
+.darkmode i.active {
+    background-color: #333;
+    color: #fff;
+}
+
+
+body.night{
+    background: #000;
+}
+
+body.night *{
+    color: #FFF;
+}
+
+body.night .darkmode{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.darkmode i:nth-child(2){
+    display: none;
+}
+
+body.night .darkmode i:nth-child(1){
+    display: none;
+}
+
+body.night .darkmode i:nth-child(2){
+    display: block;
+}
+
+.icon {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.icon:hover .tooltip {
+    display: block;
+}
+
+
+#download {
+    text-align: center; /* center the button horizontally */
+    margin: 20px; /* add some margin around the button */
+}
+
+.content-download {
+    background-color: #ff9100; /* green background color */
+    color: #fff; /* white text color */
+    border: none; /* remove default border */
+    padding: 10px 20px; /* add some padding to make the button larger */
+    font-size: 16px; /* increase font size */
+    cursor: pointer; /* change cursor shape to a pointing hand */
+    border-radius: 5px; /* add a slight rounded corner effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* add a subtle shadow effect */
+}
+
+.content-download:hover {
+    background-color: #ff8800; /* darker green background color on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* increase shadow effect on hover */
+}
+
+.content-download:active {
+    background-color: #ff9100; /* even darker green background color on active */
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.2); /* remove shadow effect on active */
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 800px) {
+    .home-container .info,
+    .home-container .home-img{
+        width: 100%;
+        margin: 20px 0;
+    }
+}
